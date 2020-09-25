@@ -6,3 +6,4 @@ coverage
 build/
 .coveralls.yml
 .travis.yml 
+appveyor.yml

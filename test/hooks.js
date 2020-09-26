@@ -4,7 +4,7 @@ import {
   insertIntoTables
 } from '../src/utils/queryFunctions';
 
-BeforeUnloadEvent(async () => {
+before(async () => {
   await createTables();
   await insertIntoTables();
 });

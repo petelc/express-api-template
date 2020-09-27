@@ -19,3 +19,13 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/nebevte2xt57twfv?svg=true)](https://ci.appveyor.com/project/petelc/express-api-template)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/nebevte2xt57twfv/branch/master?svg=true)](https://ci.appveyor.com/project/petelc/express-api-template/branch/master)
+
+*********************************************************************************************
+
+**Postgres Branch is for the connection to a Postgres Database**
+
+*********************************************************************************************
+
+**SQL Branch is for the connection to MS SQL Server**
+
+I am probably going to use the tedious package for this.

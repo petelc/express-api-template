@@ -16,3 +16,33 @@ export const employeePage = async (req, res) => {
     res.status(200).json({ employees: err.stack });
   });
 };
+
+export const addEmployee = async (req, res) => {
+  const {
+    FirstName,
+    LastName,
+    Title,
+    HireDate,
+    PerformanceRating,
+    Phone,
+    Manager
+  } = req.body;
+  const columns = 'FirstName, LastName, Title, HireDate, PerformanceRating, Phone, Manager';
+  const values = `
+  '${FirstName}',
+  '${LastName}',
+  '${Title}',
+  '${HireDate}',
+  '${PerformanceRating}',
+  '${Phone}',
+  '${Manager}'
+  `;
+
+  await employeeModel.createEmployee(columns, values).then(result => {
+    res.status(200).json({ employees: result });
+  }).catch(err => {
+    sql.close();
+    console.log(err);
+    res.status(200).json({ employees: err.stack });
+  });
+};

@@ -13,6 +13,7 @@ export const dbconfig = {
   database: db,
   port: 1433,
   options: {
+    enableArithAbort: true,
     trustedConnection: true
   }
 };
